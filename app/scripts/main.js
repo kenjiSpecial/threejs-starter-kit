@@ -46,7 +46,7 @@ require([
     'eddy',
     //'greensock'
 
-], function ( $, THREE, TweenLite, subDom, ticker, windower, Events, mouse, keys ) {
+], function ( $, _THREE, TweenLite, subDom, ticker, windower, Events, mouse, keys ) {
 
     var scene, renderer, camera;
     var spheres = [];
