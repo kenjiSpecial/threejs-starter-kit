@@ -1,0 +1,80 @@
+@import "compass/reset";
+@import "compass";
+
+$KEY_SIZE     : 34px;
+$CONTROL_SIZE : $KEY_SIZE + 8px;
+$TOP          : 20px;
+$LEFT         : 50px;
+
+
+body{
+  overflow: hidden;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#helper{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 260px;
+  height: 190px;
+
+  background: rgba(200, 200, 200, 0.8);
+
+  .key-des{
+    width: 260px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 18px;
+  }
+
+  .key{
+    @include box-sizing(border-box);
+
+    position: absolute;
+    width  : $KEY_SIZE;
+    height : $KEY_SIZE;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 5px;
+    color: #ffffff;
+    border: #ffffff 1px solid;
+    background: rgba(200, 200, 200, 0.6);
+
+    @include transform(all 1s);
+
+    &.key-down{
+      @include transform(all 1s);
+      color: rgba( 180, 180, 180, 1 );
+      background: #ffffff;
+    }
+  }
+
+  .key-w{
+    @include  translate( ($LEFT + $CONTROL_SIZE/2), $TOP );
+  }
+
+  .key-d{
+    @include  translate( ($LEFT + $CONTROL_SIZE + $CONTROL_SIZE/2), $TOP + $CONTROL_SIZE );
+  }
+
+  .key-a{
+    @include  translate( ($LEFT - $CONTROL_SIZE/2), $TOP + $CONTROL_SIZE );
+  }
+
+  .key-x{
+    @include  translate( $LEFT + $CONTROL_SIZE/2, ($TOP + $CONTROL_SIZE*2) );
+  }
+
+  .key-p{
+    @include  translate( $LEFT + $CONTROL_SIZE * 3.5, $TOP );
+  }
+
+  .key-l{
+    @include  translate( $LEFT + $CONTROL_SIZE * 3.5, ($TOP + $CONTROL_SIZE*2) );
+  }
+
+
+}
