@@ -28,6 +28,10 @@ define([
     SubDom.prototype = {
         el: null,
         $el: null,
+        visible: function(){
+            this.$el.addClass("visible");
+        },
+
         keyDown: function(data){
 
             switch (data.keyCode){
