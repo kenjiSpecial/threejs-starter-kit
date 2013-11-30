@@ -12,8 +12,30 @@ body{
   font-family: 'Ubuntu', sans-serif;
 }
 
+.mobile{
+  color: #ffffff;
+  background: #000000;
+  iframe{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  p{
+    line-height: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  div{
+    padding: 20px;
+  }
+}
+
 #helper{
+  &.visible{
+    visibility: visible;
+  }
   position: fixed;
+  visibility: hidden;
   bottom: 30px;
   right: 30px;
 

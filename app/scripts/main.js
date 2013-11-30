@@ -41,12 +41,13 @@ require([
     'helper/events',
     'helper/mouse',
     'helper/keys',
+    'helper/constans',
 
     //
     'eddy',
     //'greensock'
 
-], function ( $, _THREE, TweenLite, subDom, ticker, windower, Events, mouse, keys ) {
+], function ( $, _THREE, TweenLite, subDom, ticker, windower, Events, mouse, keys, Constans ) {
 
     var scene, renderer, camera;
     var spheres = [];
@@ -57,8 +58,24 @@ require([
     var obj = {rate: 0};
 
 
+    if(Modernizr.mobile){
+        var html =  "<div>" +
+                    "<p>Thank you for checking 'Three.js start kit' demo page.</p>" +
+                    "<p>Your browser doesn't seem to support WEBGL.</p>" +
+                    "<iframe width='280' height='150 ' src='//www.youtube.com/embed/48AqRSn-fPw' frameborder='0' allowfullscreen></iframe>"+
+                    "<p>This is the video how you can play the demo of 'Three.js start kit'.</p>" +
+                    "<p>Please check it on PC browser such as Google Chrome.</p>" +
+                    "</div>"
 
-    init();
+        Constans.$BODY.html(html);
+        Constans.$BODY.addClass("mobile")
+
+
+
+    }else{
+        init();
+    }
+
 
     function init(){
         ticker.start();
