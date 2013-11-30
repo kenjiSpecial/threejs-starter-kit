@@ -64,7 +64,7 @@ require([
                     "<p>Your browser doesn't seem to support WEBGL.</p>" +
                     "<iframe width='280' height='150 ' src='//www.youtube.com/embed/48AqRSn-fPw' frameborder='0' allowfullscreen></iframe>"+
                     "<p>This is the video how you can play the demo of 'Three.js start kit'.</p>" +
-                    "<p>Please check it on PC browser such as Google Chrome.</p>" +
+                    "<p>Please check it on WebGL Supported browser such as Google Chrome.</p>" +
                     "</div>"
 
         Constans.$BODY.html(html);
